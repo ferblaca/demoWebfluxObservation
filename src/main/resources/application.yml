@@ -1,0 +1,22 @@
+server:
+  port: 8081  
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, shutdown, prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+spring:
+  webflux:
+    base-path: /webflux  
+#  security:
+#    user:
+#      name: user
+#      password: password
+#      roles: ROLE1,ROLE2           
